@@ -3,8 +3,8 @@ console.log(`Number of categories:`,categories.length);
 
 const categoriesArray = [...categories]
   .map(
-    categories => `Category: ${categories.children[0].textContent} 
-Elements: ${categories.children[1].children.length}`
+    categories => `Category: ${categories.firstElementChild.textContent} 
+Elements: ${categories.lastElementChild.children.length}`
   )
   .join("\n");
 console.log(categoriesArray);
